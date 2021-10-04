@@ -114,11 +114,11 @@ class FedexUploadImagesRequest(FedexBaseService):
             self._config_obj = config_obj
 
             # Holds version info for the VersionId SOAP object.
-            self._version_info = {'service_id': 'cdus', 'major': '11',
+            self._version_info = {'service_id': 'cdus', 'major': '19',
                                   'intermediate': '0', 'minor': '0'}
 
             super(FedexUploadImagesRequest, self).__init__(
-                    self._config_obj, 'UploadDocumentService_v11.wsdl', *args, **kwargs)
+                    self._config_obj, 'UploadDocumentService_v19.wsdl', *args, **kwargs)
 
         def _prepare_wsdl_objects(self):
             """

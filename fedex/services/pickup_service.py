@@ -8,7 +8,7 @@ class FedexCreatePickupRequest(FedexBaseService):
         # Holds version info for the VersionId SOAP object.
         self._version_info = {
             'service_id': 'disp',
-            'major': '17',
+            'major': '23',
             'intermediate': '0',
             'minor': '0'
         }
@@ -21,7 +21,7 @@ class FedexCreatePickupRequest(FedexBaseService):
         self.CommodityDescription = None
         self.CountryRelationship = None
         self.PickupServiceCategory = None
-        super(FedexCreatePickupRequest, self).__init__(self._config_obj, 'PickupService_v17.wsdl', *args, **kwargs)
+        super(FedexCreatePickupRequest, self).__init__(self._config_obj, 'PickupService_v23.wsdl', *args, **kwargs)
 
     def _prepare_wsdl_objects(self):
         self.OriginDetail = self.client.factory.create('PickupOriginDetail')
@@ -73,7 +73,7 @@ class FedexPickupAvailabilityRequest(FedexBaseService):
         # Holds version info for the VersionId SOAP object.
         self._version_info = {
             'service_id': 'disp',
-            'major': '17',
+            'major': '23',
             'intermediate': '0',
             'minor': '0'
         }
@@ -88,7 +88,7 @@ class FedexPickupAvailabilityRequest(FedexBaseService):
         self.Carriers = None
         self.ShipmentAttributes = None
         self.PackageDetails = None
-        super(FedexPickupAvailabilityRequest, self).__init__(self._config_obj, 'PickupService_v17.wsdl', *args, **kwargs)
+        super(FedexPickupAvailabilityRequest, self).__init__(self._config_obj, 'PickupService_v23.wsdl', *args, **kwargs)
 
     def _prepare_wsdl_objects(self):
         self.Carriers = 'FDXE'
@@ -157,7 +157,7 @@ class FedexCancelPickupRequest(FedexBaseService):
         self._config_obj = config_obj
 
         # Holds version info for the VersionId SOAP object.
-        self._version_info = {'service_id': 'disp', 'major': '17',
+        self._version_info = {'service_id': 'disp', 'major': '23',
                               'intermediate': '0', 'minor': '0'}
         self.CarrierCode = None
         self.PickupConfirmationNumber = None
@@ -172,7 +172,7 @@ class FedexCancelPickupRequest(FedexBaseService):
         self.PhoneExtension = None
         # Call the parent FedexBaseService class for basic setup work.
         super(FedexCancelPickupRequest, self).__init__(self._config_obj,
-                                                         'PickupService_v17.wsdl',
+                                                         'PickupService_v23.wsdl',
                                                          *args, **kwargs)
 
     def _prepare_wsdl_objects(self):
